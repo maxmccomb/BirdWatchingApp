@@ -17,21 +17,28 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void WPButtonClick(View v)
-    {
-        System.out.println("WP Clicked");
+    public void WPIncClicked(View v) {
         WPClickCount++;
-        System.out.println(WPClickCount);
         TextView tv = (TextView)findViewById(R.id.textView3);
-        System.out.println("Text View Found");
-        tv.setText(WPClickCount);
-        System.out.println("Changed Text");
+        tv.setText("" + WPClickCount);
 
     }
 
-    public void robinClickCount(View v){
+    public void WPDecClicked(View v){
+        WPClickCount--;
+        TextView tv = (TextView)findViewById(R.id.textView3);
+        tv.setText("" + WPClickCount);
+    }
+
+    public void robinIncClicked(View v){
         robinClickCount++;
         TextView tv = (TextView)findViewById(R.id.textView4);
-        tv.setText(robinClickCount);
+        tv.setText("" + robinClickCount);
+    }
+
+    public void robinDecClicked(View v){
+        robinClickCount--;
+        TextView tv = (TextView)findViewById(R.id.textView4);
+        tv.setText("" + robinClickCount);
     }
 }
